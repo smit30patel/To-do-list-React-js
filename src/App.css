@@ -1,8 +1,11 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+
 .to-do{
   display: flex;
   flex-direction: column;
   width: 450px;
-  background-color: rgb(9, 216, 216);
+  /* background-color: rgb(9, 216, 216); */
   padding: 20px;
   justify-content: center;
   align-items: center;
@@ -10,6 +13,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-family: 'Poppins', sans-serif;
+  background-image: linear-gradient(115deg, #C6EA8D , #FE90AF);
 }
 .input-to-do {
   width: 75%;
@@ -53,7 +58,9 @@
   display: flex;
   align-items: center;
   border-bottom: 1px solid #ccc;
-  
+  border-radius: 6px;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
 }
 .to-do-ul {
   width: 80%;
