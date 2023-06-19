@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../App.css";
 import DeleteIcon from "@mui/icons-material/Delete";
+import FlipMove from "react-flip-move";
 
 function Todo() {
   const [todos, setTodos] = useState([]);
@@ -44,15 +45,17 @@ function Todo() {
       </div>
       <div className="to-do-ul">
         <ul>
-          {todos.map((todo, index) => (
-            <li key={index}>
-              <span>{todo}</span>
-              <DeleteIcon
-                className="delete-icon"
-                onClick={() => handleRemoveTodo(index)}
-              />
-            </li>
-          ))}
+          <FlipMove typeName="ul">
+            {todos.map((todo, index) => (
+              <li key={index}>
+                <span>{todo}</span>
+                <DeleteIcon
+                  className="delete-icon"
+                  onClick={() => handleRemoveTodo(index)}
+                />
+              </li>
+            ))}
+          </FlipMove>
         </ul>
       </div>
     </div>
